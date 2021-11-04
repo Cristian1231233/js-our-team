@@ -10,62 +10,53 @@
 
 const arrPeople = [
     {
-        foto: 'wayne-barnett-founder-ceo.jpg',
+        foto: 'img/wayne-barnett-founder-ceo.jpg',
         nome: 'Wayne Barnett',
         ruolo: 'Founder & CEO'
     },
     {
-        foto: 'wayne-barnett-founder-ceo.jpg',
+        foto: 'img/wayne-barnett-founder-ceo.jpg',
         nome: 'Wayne Barnett',
         ruolo: 'Founder & CEO'
     },
     {
-        foto: 'wayne-barnett-founder-ceo.jpg',
+        foto: 'img/wayne-barnett-founder-ceo.jpg',
         nome: 'Wayne Barnett',
         ruolo: 'Founder & CEO'
     },
     {
-        foto: 'wayne-barnett-founder-ceo.jpg',
+        foto: 'img/wayne-barnett-founder-ceo.jpg',
         nome: 'Wayne Barnett',
         ruolo: 'Founder & CEO'
     },
     {
-        foto: 'wayne-barnett-founder-ceo.jpg',
+        foto: 'img/wayne-barnett-founder-ceo.jpg',
         nome: 'Wayne Barnett',
         ruolo: 'Founder & CEO'
     },
     {
-        foto: 'wayne-barnett-founder-ceo.jpg',
+        foto: 'img/wayne-barnett-founder-ceo.jpg',
         nome: 'Wayne Barnett',
         ruolo: 'Founder & CEO'
-    },
-    {
-        foto: 'wayne-barnett-founder-ceo.jpg',
-        nome: 'Wayne Barnett',
-        ruolo: 'Founder & CEO'
-    },
-    {
-        foto: 'wayne-barnett-founder-ceo.jpg',
-        nome: 'Wayne Barnett',
-        ruolo: 'Founder & CEO'
-    },
-    {
-        foto: 'wayne-barnett-founder-ceo.jpg',
-        nome: 'Wayne Barnett',
-        ruolo: 'Founder & CEO'
-    },
-    {
-        foto: 'wayne-barnett-founder-ceo.jpg',
-        nome: 'Wayne Barnett',
-        ruolo: 'Founder & CEO'
-    },
+    }
     
        
 
 ]
 
 console.log(arrPeople);
+
+const teamCard = document.querySelector('.team-card');
+
+console.log(teamCard);
+
 for( let i = 0; i < arrPeople.length; i++){
-    const peolpes = arrPeople[i];
-    console.log(peoples);
+    const people = arrPeople[i];
+    console.log(people);
+
 }
+let html = '';
+for( let i in arrPeople){
+    html += `div${arrPeople[i]}`;
+}
+teamCard.innerHTML = html;
