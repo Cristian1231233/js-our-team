@@ -7,6 +7,7 @@
     //   info
 // creiamo un ciclo for dell'array
 // stampiamo la card a schermo
+ 
 
 const arrPeople = [
     {
@@ -15,48 +16,58 @@ const arrPeople = [
         ruolo: 'Founder & CEO'
     },
     {
-        foto: 'img/wayne-barnett-founder-ceo.jpg',
-        nome: 'Wayne Barnett',
-        ruolo: 'Founder & CEO'
+        foto: 'img/angela-caroll-chief-editor.jpg',
+        nome: 'Angela Caroll',
+        ruolo: 'Chief Editor'
+    },
+    {
+        foto: 'img/walter-gordon-office-manager.jpg',
+        nome: 'Walter Gordon',
+        ruolo: 'Office Manager'
+    },
+    {
+        foto: 'img/scott-estrada-developer.jpg',
+        nome: 'Angela Lopez',
+        ruolo: 'Social Media Manager'
     },
     {
         foto: 'img/wayne-barnett-founder-ceo.jpg',
-        nome: 'Wayne Barnett',
-        ruolo: 'Founder & CEO'
+        nome: 'Scott Extrada',
+        ruolo: 'Developer'
     },
     {
-        foto: 'img/wayne-barnett-founder-ceo.jpg',
-        nome: 'Wayne Barnett',
-        ruolo: 'Founder & CEO'
+        foto: 'img/barbara-ramos-graphic-designer.jpg',
+        nome: 'Barbara Ramos',
+        ruolo: 'Graphic Designer'
     },
-    {
-        foto: 'img/wayne-barnett-founder-ceo.jpg',
-        nome: 'Wayne Barnett',
-        ruolo: 'Founder & CEO'
-    },
-    {
-        foto: 'img/wayne-barnett-founder-ceo.jpg',
-        nome: 'Wayne Barnett',
-        ruolo: 'Founder & CEO'
-    }
     
        
 
 ]
 
-console.log(arrPeople);
 
-const teamCard = document.querySelector('.team-card');
 
-console.log(teamCard);
+const teamContainer = document.querySelector('.team-container');
+//const cardImg = document.querySelector('.card-image');
 
+let html = '';
 for( let i = 0; i < arrPeople.length; i++){
     const people = arrPeople[i];
     console.log(people);
+    html += `
+    <div class="team-card">
+        <div class="card-image">
+            <img
+            src="${people.foto}"
+            alt="Wayne Barnett"
+            />
+        </div>
+        <div class="card-text">
+            <h3>${people.nome}</h3>
+            <p>${people.ruolo}</p>
+        </div>
+    </div>
+    `;
+}
 
-}
-let html = '';
-for( let i in arrPeople){
-    html += `div${arrPeople[i]}`;
-}
-teamCard.innerHTML = html;
+teamContainer.innerHTML = html;
